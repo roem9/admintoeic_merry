@@ -59,8 +59,8 @@
                             <span class="text-danger">*BERIKUT CARA MENGGUNAKAN VARIABEL YANG BISA DITAMPILKAN PADA PESAN.</span> <br>
                             <b>Tes Latihan : </b><br>
                             $poin = total poin, $nama = nama, $email = email, $tes = Nama Tes, $tgl_tes = Tanggal Tes, $tgl_pengumuman = Tanggal Pengumuman <br><br>
-                            <b>Tes TOEFL : </b><br>
-                            $nama = nama, $t4_lahir = Tempat Lahir, $tgl_lahir = Tgl Lahir, $alamat = Alamat, $no_wa = No. WA, $email = email, $jk = gende, $nilai_listening = Nilai Listening, $nilai_structure = Nilai Structure, $nilai_reading = Nilai Reading, $skor = Skor Tes,
+                            <b>Tes TOEIC : </b><br>
+                            $nama = nama, $t4_lahir = Tempat Lahir, $tgl_lahir = Tgl Lahir, $alamat = Alamat, $no_wa = No. WA, $email = email, $jk = gende, $nilai_listening = Nilai Listening, $nilai_reading = Nilai Reading, $skor = Skor Tes,
                             $tes = Nama Tes, $tgl_tes = Tanggal Tes, $tgl_pengumuman = Tanggal Pengumuman, $link = link wa<br><br>
                             <b>Contoh Pesan : </b><br>
                             Selamat Anda Telah Menyelesaikan $tes, Berikut Ini Data Diri Anda :<br>
@@ -70,9 +70,8 @@
                             Alamat      : $alamat <br><br>
                             Berikut Ini Nilai Anda :<br>
                             Nilai Listening : $nilai_listening<br>
-                            Nilai Structure : $nilai_structure<br>
                             Nilai Reading   : $nilai_reading<br>
-                            SKOR TOEFL      : $skor<br>
+                            SKOR TOEIC      : $skor<br>
 
                             Untuk memesan sertifikat silakan hubungi admin melalui link berikut : $link
                         </small>
@@ -151,9 +150,9 @@
                         <span class="text-danger">*BERIKUT CARA MENGGUNAKAN VARIABEL YANG BISA DITAMPILKAN PADA PESAN.</span> <br>
                         <b>Tes Latihan : </b><br>
                         $poin = total poin, $nama = nama, $email = email, $tes = Nama Tes, $tgl_tes = Tanggal Tes, $tgl_pengumuman = Tanggal Pengumuman <br><br>
-                        <b>Tes TOEFL : </b><br>
-                        $nama = nama, $t4_lahir = Tempat Lahir, $tgl_lahir = Tgl Lahir, $alamat = Alamat, $no_wa = No. WA, $email = email, $jk = gende, $nilai_listening = Nilai Listening, $nilai_structure = Nilai Structure, $nilai_reading = Nilai Reading, $skor = Skor Tes,
-                        $tes = Nama Tes, $tgl_tes = Tanggal Tes, $tgl_pengumuman = Tanggal Pengumuman, $link = link<br><br>
+                        <b>Tes TOEIC : </b><br>
+                        $nama = nama, $t4_lahir = Tempat Lahir, $tgl_lahir = Tgl Lahir, $alamat = Alamat, $no_wa = No. WA, $email = email, $jk = gende, $nilai_listening = Nilai Listening, $nilai_reading = Nilai Reading, $skor = Skor Tes,
+                        $tes = Nama Tes, $tgl_tes = Tanggal Tes, $tgl_pengumuman = Tanggal Pengumuman, $link = link wa<br><br>
                         <b>Contoh Pesan : </b><br>
                         Selamat Anda Telah Menyelesaikan $tes, Berikut Ini Data Diri Anda :<br>
                         Nama        : $nama<br>
@@ -162,9 +161,8 @@
                         Alamat      : $alamat <br><br>
                         Berikut Ini Nilai Anda :<br>
                         Nilai Listening : $nilai_listening<br>
-                        Nilai Structure : $nilai_structure<br>
                         Nilai Reading   : $nilai_reading<br>
-                        SKOR TOEFL      : $skor<br>
+                        SKOR TOEIC      : $skor<br>
 
                         Untuk memesan sertifikat silakan hubungi admin melalui link berikut : $link
                     </small>
