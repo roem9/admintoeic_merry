@@ -9,6 +9,7 @@ class Tes_model extends MY_Model {
 
         $this->datatables->select("id_tes, tgl_tes, tgl_pengumuman, nama_tes, a.status, nama_soal, a.catatan, password,
             (select count(id) from peserta where a.id_tes = id_tes) as peserta_latihan,
+            (select count(id) from peserta_toeic where a.id_tes = id_tes) as peserta_toeic,
             (select count(id) from peserta_toefl where a.id_tes = id_tes) as peserta_toefl, a.id_soal
         ");
         $this->datatables->from("tes as a");
@@ -16,7 +17,7 @@ class Tes_model extends MY_Model {
         $this->datatables->where("a.hapus", 0);
 
         $this->datatables->add_column("soal", '$1', 'jum_soal(id_soal)');
-        $this->datatables->add_column("peserta", '$1', 'peserta(peserta_latihan, peserta_toefl)');
+        $this->datatables->add_column("peserta", '$1', 'peserta(peserta_latihan, peserta_toefl, peserta_toeic)');
         $this->datatables->add_column('action','
                 <span class="dropdown">
                     <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">

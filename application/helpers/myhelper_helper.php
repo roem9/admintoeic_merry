@@ -207,9 +207,8 @@
     }
 
     // jumlah peserta 
-    function peserta($peserta_latihan, $peserta_toefl){
-        if($peserta_latihan > $peserta_toefl) return $peserta_latihan;
-        else return $peserta_toefl;
+    function peserta($peserta_latihan, $peserta_toefl, $peserta_toeic){
+        return max($peserta_latihan, $peserta_toefl, $peserta_toeic);
     }
 
     // poin setiap sesi TOEIC
