@@ -351,8 +351,8 @@ class Tes extends MY_Controller {
         $peserta['skor'] = $skor;
 
         $skor = round($skor);
-        
-        $peserta['no_doc'] = "{$peserta['tahun']}/{$peserta['no_doc']}";
+
+        $peserta['no_doc'] = "$peserta[no_doc]/ME/".getRomawi(date('m', strtotime($peserta['tgl_tes'])))."/$peserta[tahun]";
 
         $peserta['config'] = $this->tes->config();
         $peserta['id_tes'] = $peserta['id_tes'];

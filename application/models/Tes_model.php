@@ -280,11 +280,10 @@ class Tes_model extends MY_Model {
         if($data) $no = $data['num']+1;
         else $no = 1;
 
-        if($no > 0 && $no < 10) $no_doc = "0000".$no;
-        elseif($no >= 10 && $no < 100) $no_doc = "000".$no;
-        elseif($no >= 100 && $no < 1000) $no_doc = "00".$no;
-        elseif($no >= 1000 && $no < 10000) $no_doc = "0".$no;
-        elseif($no >= 10000) $no_doc = $no;
+        if($no > 0 && $no < 10) $no_doc = "000".$no;
+        elseif($no >= 10 && $no < 100) $no_doc = "00".$no;
+        elseif($no >= 100 && $no < 1000) $no_doc = "0".$no;
+        elseif($no >= 1000) $no_doc = $no;
         
         $this->load->library('qrcode/ciqrcode'); //pemanggilan library QR CODE
 
