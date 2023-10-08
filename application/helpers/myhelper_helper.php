@@ -280,3 +280,28 @@
 
         return $soal;
     }
+
+    function format_tanggal($tanggal_input) {
+        $tanggal_obj = strtotime($tanggal_input);
+        $tanggal_output = date('jS \of F Y', $tanggal_obj);
+    
+        // Mendapatkan angka hari
+        $hari = date('j', $tanggal_obj);
+    
+        // Menangani sufiks ordinal
+        $sufiks = '';
+        if ($hari % 10 == 1 && $hari != 11) {
+            $sufiks = 'st';
+        } elseif ($hari % 10 == 2 && $hari != 12) {
+            $sufiks = 'nd';
+        } elseif ($hari % 10 == 3 && $hari != 13) {
+            $sufiks = 'rd';
+        } else {
+            $sufiks = 'th';
+        }
+    
+        // Ganti sufiks dengan <sup>sufiks</sup>
+        $tanggal_output = str_replace($sufiks, "<sup>{$sufiks}</sup>", $tanggal_output);
+    
+        return $tanggal_output;
+    }
