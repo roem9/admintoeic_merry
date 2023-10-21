@@ -283,7 +283,8 @@
 
     function format_tanggal($tanggal_input) {
         $tanggal_obj = strtotime($tanggal_input);
-        $tanggal_output = date('jS \of F Y', $tanggal_obj);
+        $day = date('j', $tanggal_obj);
+        $tanggal_output = date('\of F Y', $tanggal_obj);
     
         // Mendapatkan angka hari
         $hari = date('j', $tanggal_obj);
@@ -291,17 +292,18 @@
         // Menangani sufiks ordinal
         $sufiks = '';
         if ($hari % 10 == 1 && $hari != 11) {
-            $sufiks = 'st';
+            $sufiks = '<sup>st</sup>';
         } elseif ($hari % 10 == 2 && $hari != 12) {
-            $sufiks = 'nd';
+            $sufiks = '<sup>nd</sup>';
         } elseif ($hari % 10 == 3 && $hari != 13) {
-            $sufiks = 'rd';
+            $sufiks = '<sup>rd</sup>';
         } else {
-            $sufiks = 'th';
+            $sufiks = '<sup>th</sup>';
         }
     
         // Ganti sufiks dengan <sup>sufiks</sup>
-        $tanggal_output = str_replace($sufiks, "<sup>{$sufiks}</sup>", $tanggal_output);
+        $day .= $sufiks;
     
-        return $tanggal_output;
+        $tgl_format = $day . " " . $tanggal_output;
+        return $tgl_format;
     }

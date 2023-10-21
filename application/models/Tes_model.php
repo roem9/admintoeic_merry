@@ -268,12 +268,12 @@ class Tes_model extends MY_Model {
         $peserta = $this->get_one("peserta_toeic", ["id" => $id]);
         $tes = $this->get_one("tes", ["id_tes" => $peserta['id_tes']]);
         
-        $date = date('Y', strtotime($tes['tgl_tes']));
+        $date = date('Y', strtotime($peserta['tgl_tes_peserta']));
 
         $this->db->select("CONVERT(no_doc, UNSIGNED INTEGER) AS num");
-        $this->db->from("peserta_toeic as a");
-        $this->db->join("tes as b", "a.id_tes = b.id_tes");
-        $this->db->where("YEAR(tgl_tes)", $date);
+        $this->db->from("peserta_toeic");
+        // $this->db->join("tes as b", "a.id_tes = b.id_tes");
+        $this->db->where("YEAR(tgl_tes_peserta)", $date);
         $this->db->order_by("num", "DESC");
         $data = $this->db->get()->row_array();
 

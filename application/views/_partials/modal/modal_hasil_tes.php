@@ -107,6 +107,10 @@
                     <input type="text" name="language" class="form form-control required">
                     <label>Language</label>
                 </div>
+                <div class="form-floating mb-3">
+                    <input type="date" name="tgl_tes_peserta" class="form form-control required">
+                    <label>Tgl Tes Peserta</label>
+                </div>
             </div>
             <div class="modal-footer">
                 <div class="d-flex justify-content-end">
