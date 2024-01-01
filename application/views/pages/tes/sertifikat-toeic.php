@@ -186,7 +186,7 @@
         }
 
         @page :first {
-            background-image: url("<?= base_url()?>assets/img/sertifikat.jpg");
+            background-image: url("<?= base_url()?>assets/img/sertifikats.jpg");
             background-image-resize: 6;
         }
         
