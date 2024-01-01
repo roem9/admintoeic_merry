@@ -186,7 +186,7 @@
         }
 
         @page :first {
-            background-image: url("<?= base_url()?>assets/img/sertifikats.jpg");
+            background-image: url("<?= base_url()?>/assets/img/sertifikats.jpg");
             background-image-resize: 6;
         }
         
@@ -194,7 +194,7 @@
 </head>
     <body style="text-align: center">
         <div class="qrcode">
-            <img src="<?= base_url()?>assets/qrcode_toeic/<?= $id?>.png" width=140 alt="">
+            <img src="<?= base_url()?>/assets/qrcode_toeic/<?= $id?>.png" width=140 alt="">
         </div>
         <div class="reading"><p style="text-align: right; margin: 0px"><b><?= round($skor)?></b></p></div>
         <div class="nama"><p style="text-align: center; margin: 0px"><b><u><?= $nama?></u></b></p></div>
